@@ -1,0 +1,27 @@
+/*Program handles divide by zero exception*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b;
+	cout<<"enter a and b values:"<<endl;
+	cin>>a>>b;
+	cout<<"a is :"<<a<<endl;
+	cout<<"b is:"<<b<<endl;
+	try
+	{
+		if(b==0)
+		{
+			throw b;
+		}
+		else
+		{
+			cout<<"The result of a/b is:"<<a/b<<endl;
+		}
+	}
+	catch(int b)
+	{
+		cout<<"b cannot be zero"<<endl;
+	}
+	return 0;
+}
