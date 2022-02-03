@@ -1,0 +1,24 @@
+/* Program on Catching derived classes.*/
+#include<iostream>
+using namespace std;
+class B{
+};
+class C:public B{
+};
+int main()
+{
+	C derive;
+	try
+	{
+		throw derive;
+	}
+	/*catch(B b)
+	{
+		cout<<"Base class"<<endl;
+	}*/
+	catch(C derive)
+	{
+		cout<<"wont execute!!"<<endl;
+	}
+	return 0;
+}
