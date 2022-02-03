@@ -1,0 +1,24 @@
+/*Program on Rethrowing an exception*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	try
+	{
+		try
+		{
+			throw 20;
+		}
+		catch(int n)
+		{
+			cout<<"HANDLE PARTIALLY"<<endl;
+			//rethrowing
+			throw;
+		}
+	}
+	catch(int n)
+	{
+		cout<<"HANDLE REMAINING"<<endl;
+	}
+	return 0;
+}
