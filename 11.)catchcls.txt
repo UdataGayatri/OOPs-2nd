@@ -1,0 +1,31 @@
+/*Program on Catching class type exceptions*/
+#include<iostream>
+#include<cstring>
+using namespace std;
+class Exception{
+	public:
+		char str_what[80];
+		int what;
+		Exception(){*str_what=0;what = 0;}
+		Exception(char*s,int e){
+			strcpy(str_what,s);
+			what = e;
+		}
+}; 
+int main()
+{
+	int i;
+	try
+	{
+		cout<<"enter a positive number:";
+		cin>>i;
+		if(i<0)
+		throw Exception("Not positive",i);
+	}
+	catch(Exception e)
+	{
+		cout<<e.str_what<<":";
+		cout<<e.what<<"\n";
+	}
+	return 0;
+}
